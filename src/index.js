@@ -1,17 +1,18 @@
 const express = require('express');
-const app = express();
-const uuid = require('uuid');
-const { PORT, TESTE_CONEXAO } = require('./constants');
+const { PORT } = require('./constants');
 const routes = require('./routes');
-const transactions = [];
+const app = express();
+
+//ROTA DO TESTE SERVIDOR
+const testConnectionRoute = require('./testeServidor');
+app.use('/', testConnectionRoute);
 
 app.use(express.json());
-
-// Adiciona as rotas ao aplicativo
 app.use('/', routes);
 
-// Criação do servidor
+
+
 app.listen(PORT, () => {
-    console.info(`Servidor rodando na porta ${PORT}`);
+  console.info(`Servidor rodando na porta ${PORT}`);
 });
 

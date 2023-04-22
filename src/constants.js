@@ -1,7 +1,10 @@
-const PORT = 3000;
-const TESTE_CONEXAO = 'Teste de Conexão- FinSys';
-
-module.exports = {
-    PORT,
-    TESTE_CONEXAO,
-};
+const CONSTANTS = {
+    PORT: 3000,
+    TESTE_CONEXAO: 'FinSys',
+    ERROR_MESSAGES: {
+    TRANSACTION_NOT_FOUND: 'Transação não encontrada.',
+    }
+  };
+  
+  module.exports = CONSTANTS;
+  
