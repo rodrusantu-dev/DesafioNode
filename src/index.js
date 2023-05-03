@@ -10,9 +10,9 @@ app.use('/', testConnectionRoute);
 app.use(express.json());
 app.use('/', routes);
 
-
-
+// Inicia o servidor
 app.listen(PORT, () => {
   console.info(`Servidor rodando na porta ${PORT}`);
 });
+
 
